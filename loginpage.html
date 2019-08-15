@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+
+<style media="screen">
+body{
+
+  margin:0;
+  padding:0;
+  overflow:hidden;
+}
+.bigger{position:absolute;
+background:url('image/iceskating.jpg') no-repeat fixed;
+overflow:hidden;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background-size: cover;
+}
+.bigger .snow3, .snow2{
+position:absolute;
+top:0;
+left:0;
+background:url('image/snow1.jpg') no-repeat fixed;
+background-size: cover;
+overflow: hidden;
+width:100%;
+height:100%;
+  mix-blend-mode: screen;
+}
+.bigger .snow1{
+position:absolute;
+top:0;
+left:0;
+background:url('image/snow.jpg') no-repeat fixed;
+background-size: cover;
+overflow: hidden;
+width:100%;
+height:100%;
+  mix-blend-mode: screen;
+}
+
+.snow1{
+
+  animation:dear1 15s linear infinite;
+}
+.snow2{
+
+  animation:dear2 8s linear infinite;
+  mix-blend-mode: screen;
+}
+.snow3{
+
+//  animation:dear3 15s linear infinite;
+  mix-blend-mode: screen;
+}
+@keyframes dear1 {
+  0%{
+
+background-position: 0px 0px;
+
+  }
+100%{
+
+background-position: 550px 200px;
+
+  }
+}
+@keyframes dear2 {
+  0%{
+
+background-position: 0px 0px;
+
+  }
+100%{
+
+background-position: 400px 450px;
+
+  }
+}
+@keyframes dear3 {
+  0%{
+
+background-position: 0px 0px;
+
+  }
+100%{
+
+background-position: 400px 450px;
+
+  }
+}
+
+.big{margin-top:50px;
+width: 400px;
+height: 500px;
+transform: rotate(5deg);
+position:absolute;
+top:8%;
+left:60%;
+padding:10px;
+background-color:grey;
+}
+.big .small{
+
+  width: 380px;
+  height: 450px;
+background-color:skyblue;
+ transform: translate(-1px, -2px) rotate(-10deg);7
+ cursor:pointer;
+    animation:shake 1s infinite;
+
+}
+
+@keyframes shake {
+
+0%{
+ transform: translate(-1px, -2px) rotate(0deg);
+
+}
+30%{
+
+  transform: translate(-1px, -2px) rotate(30deg);
+}50%{
+
+  transform: translate(-1px, -2px) rotate(90deg);
+}70%{
+
+  transform: translate(-1px, -2px) rotate(140deg);
+}
+100%{
+
+
+    transform: translate(-1px, -2px) rotate(180deg);
+}
+
+}
+
+ .small1{PADDING:8PX;
+position: absolute;
+border-radius:2%;
+  top:38px;
+  font-size: 18px;
+    width: 340px;
+    height: 400px;
+
+  background-color:aqua;
+   transform: translate(-1px, -2px) rotate(-5deg);
+animation:none ;
+
+}
+input[type="text"],input[type="email"]{
+width:200px;
+height:25px;
+box-shadow:5px 2px grey;
+border-radius:20%;
+margin-top:10px;
+color:red;
+font-size:15px;
+font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+textarea{
+box-shadow:5px 2px grey;
+width:250px;
+height:70px;
+margin-top: 30px;
+
+}
+input[type="checkbox"]{
+width:20px;
+height:20px;
+
+
+}
+
+button{
+padding:2px;
+border:2px solid #456;
+text-align: center;
+font-weight: bold;
+font-style: 10fieldset;
+font-size:15px;
+color:white;
+font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+background-color: #578;
+width: 80px;
+height: 30px;
+margin-top: 20px;
+
+border-radius:30px;
+}
+button:hover{
+cursor:pointer;
+  box-shadow: 2px 2px grey;
+}
+footer{cursor:pointer;
+
+
+margin-top:45px;
+float:right;
+
+
+}
+body h1:first{
+font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+color:blue;
+font-weight:bold;
+
+user-select: none;
+
+}
+@keyframes shake1 {0%{
+ transform: translate(-1px, -2px) rotate(0deg);
+
+}50%{
+
+  transform: translate(-1px, -2px) rotate(10deg);
+}
+100%{
+
+
+    transform: translate(-1px, -2px) rotate(-20deg);
+}
+
+}
+</style>
+<script type="text/javascript">
+function call(){
+var e=lastIndexof('.');
+var d=Indexof('@');
+var nam=document.getElementById('name');
+var emil=document.getElementById('email');
+var add=document.getElementById('address');
+if(nam.value==""){
+
+  nam.style.border="1px solid red";
+  return false;
+}
+if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(nam.value)){
+
+  return true;
+}else{
+  nam.style.border="1px solid red";
+  return false;
+}
+if(emil.value==""){
+  emil.style.border="1px solid red";
+  return false;
+
+}
+if(add.value==""){
+
+    add.style.border="1px solid red";
+    return false;
+}
+
+return true;
+
+
+
+}
+
+function dear(){
+window.location.assign("signin.html");}
+</script>
+
+
+
+</head>
+<body>
+<div id="particles-js"></div>
+  <script src="particlejs/particles.js"></script>
+    <script src="app.js"></script>
+<div class="bigger">
+<div class="snow1 akash" >
+
+</div>
+<div class="snow2 akash" >
+
+</div>
+<div class="snow3 akash" >
+
+</div>
+</div>
+<div class="big">
+<div class="small">
+
+</div>
+<div class="small1">
+<form class="form1" action="index.html" onsubmit="call()" method="post">
+<div class="">
+  <h1>Signup</h1>
+<label for="name">Name:</label>
+<input type="text" placeholder="name" required id="name"/><br/>
+<label for="name">Email:</label>
+<input type="email" placeholder="email" required id="email"/>
+<br/>
+<input type="checkbox">Male<br/>
+<input type="checkbox">Female<br/>
+<label for="address">Address:</label>
+<textarea style="row:9;cols:30"></textarea>
+
+<br/>
+<button type="submit">send</button>
+<footer onclick="dear()">Have a account?click for login</footer>
+</div>
+
+
+
+
+
+</form>
+</div>
+
+</div>
+
+
+
+
+
+
+</body>
+</html>

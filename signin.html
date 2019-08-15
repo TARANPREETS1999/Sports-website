@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+<style media="screen">
+
+body{
+background:url('image/iceskating.jpg') no-repeat fixed;
+overflow:hidden;
+background-size: cover;}
+
+.big{margin-top:100px;
+width: 400px;
+height: 500px;
+transform: rotate(5deg);
+position:absolute;
+top:8%;
+left:60%;
+padding:10px;
+background-color:grey;
+}
+.big .small{
+
+  width: 380px;
+  height: 480px;
+background-color:skyblue;
+ transform: translate(-1px, -2px) rotate(-10deg);
+
+}
+.big .small{
+cursor:pointer;
+   animation:shake 1s infinite;
+}
+@keyframes shake {
+
+0%{
+ transform: translate(-1px, -2px) rotate(0deg);
+
+}
+30%{
+
+  transform: translate(-1px, -2px) rotate(30deg);
+}50%{
+
+  transform: translate(-1px, -2px) rotate(90deg);
+}70%{
+
+  transform: translate(-1px, -2px) rotate(140deg);
+}
+100%{
+
+
+    transform: translate(-1px, -2px) rotate(180deg);
+}
+
+}
+
+ .small1{PADDING:15PX;
+position: absolute;
+border-radius:2%;
+  top:30px;
+  font-size: 18px;
+    width: 340px;
+    height: 400px;
+
+  background-color:aqua;
+   transform: translate(-1px, -2px) rotate(-5deg);
+animation:none ;
+
+}
+input[type="text"],input[type="email"],input[type="password"]{
+width:200px;
+height:25px;
+box-shadow:5px 2px grey;
+border-radius:20%;
+margin-top:10px;
+color:red;
+font-size:15px;
+font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+textarea{
+box-shadow:5px 2px grey;
+width:250px;
+height:70px;
+margin-top: 30px;
+
+}
+
+button{
+padding:2px;
+border:2px solid #456;
+text-align: center;
+font-weight: bold;
+font-style: 10fieldset;
+font-size:15px;
+color:white;
+font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+background-color: #578;
+width: 80px;
+height: 30px;
+margin-top: 20px;
+
+border-radius:30px;
+}
+button:hover{
+cursor:pointer;
+  box-shadow: 2px 2px grey;
+}
+footer{cursor:pointer;
+
+
+margin-top:45px;
+float:right;
+
+
+}
+body h1:first{
+font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+color:blue;
+font-weight:bold;
+
+user-select: none;
+
+}
+@keyframes shake1 {0%{
+ transform: translate(-1px, -2px) rotate(0deg);
+
+}50%{
+
+  transform: translate(-1px, -2px) rotate(10deg);
+}
+100%{
+
+
+    transform: translate(-1px, -2px) rotate(-20deg);
+}
+
+}#particles-js:after{
+
+position:absolute;
+top:0;
+mix-blend-mode:screen;
+  height:100%;
+  background-color: grey;
+}
+</style>
+<script type="text/javascript">
+function call(){
+
+var e=lastIndexof('.');
+var d=Indexof('@');
+var nam=document.getElementById('name');
+var emil=document.getElementById('email');
+var d=document.getElementById('passward');
+var dd=document.getElementById('passward1');
+if(nam.value==" "){
+alert("iam aja");
+  nam.style.border="1px solid red";
+  return false;
+}
+
+if(emil.value==" "){
+  emil.style.border="1px solid red";
+  return false;
+
+}
+if(d.value==" "){
+
+    d.style.border="1px solid red";
+    return false;
+}
+if(!isNan(d.value)){
+  return false;
+}
+if(d.value!=dd.value){
+alert("iam akash");
+    dd.style.border="1px solid red";
+    return false;
+}
+
+return true;
+}
+
+function dear(){
+window.location.assign("loginpage.html");}
+</script>
+</head>
+<body>
+  <div id="particles-js"></div>
+    <script src="particlejs/particles.js"></script>
+      <script src="particlejs/app.js"></script>
+<div class="big">
+<div class="small">
+
+</div>
+<div class="small1">
+<form class="form1"   action="index.html" method="post">
+<div class="">
+  <h1>Login</h1>
+<label for="name">Name:</label>
+<input type="text" placeholder="name" id="name"/><br/>
+<label for="name">Email:</label>
+<input type="email" placeholder="email"  id="email"/>
+<br/>
+<label for="passward">Passward</label>
+<input type="password" name="" id="passward" required placeholder="password">
+
+
+<br/>
+<label for="passward1">confirm</label>
+<input type="password" id="passward1" required placeholder="confirm">
+
+
+<br/>
+<button type="submit" onclick="call()">login</button>
+<footer onclick="dear()">Don't have  a account?click for signup</footer>
+</div>
+</form>
+</div>
+
+</div>
+
+</body>
+</html>
